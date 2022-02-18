@@ -47,6 +47,7 @@ class PostsViewController: UIViewController {
                     return
                 }
                 self.postsCommentArray.append(contentsOf: response)
+                
             }
         }
     }
