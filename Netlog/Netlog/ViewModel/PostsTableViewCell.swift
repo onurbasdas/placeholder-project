@@ -14,9 +14,9 @@ class PostsTableViewCell: UITableViewCell {
         return UINib(nibName: "PostsTableViewCell", bundle: nil)
     }
     
+    @IBOutlet var backView: UIView!
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblDesc: UILabel!
-    @IBOutlet var backView: UIView!
     @IBOutlet var lblCommentDesc: UILabel!
     @IBOutlet var lblCommentCount: UILabel!
   

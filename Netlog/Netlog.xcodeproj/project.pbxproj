@@ -10,17 +10,19 @@
 		4DEBDB3167C2D729EE69C4F7 /* Pods_Netlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087155A77C6B604CA99A8916 /* Pods_Netlog.framework */; };
 		B902704727C001BE0015EC75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902704627C001BE0015EC75 /* AppDelegate.swift */; };
 		B902704927C001BE0015EC75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902704827C001BE0015EC75 /* SceneDelegate.swift */; };
-		B902704B27C001BE0015EC75 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902704A27C001BE0015EC75 /* PostsViewController.swift */; };
+		B902704B27C001BE0015EC75 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902704A27C001BE0015EC75 /* PostsVC.swift */; };
 		B902704E27C001BE0015EC75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B902704C27C001BE0015EC75 /* Main.storyboard */; };
 		B902705027C001BF0015EC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B902704F27C001BF0015EC75 /* Assets.xcassets */; };
 		B902705327C001BF0015EC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B902705127C001BF0015EC75 /* LaunchScreen.storyboard */; };
 		B902705B27C001CC0015EC75 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902705A27C001CC0015EC75 /* Service.swift */; };
 		B902705D27C001E20015EC75 /* CustomSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902705C27C001E20015EC75 /* CustomSession.swift */; };
 		B902705F27C002240015EC75 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902705E27C002240015EC75 /* PostsModel.swift */; };
-		B9815F8A27C00494008D4006 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9815F8927C00494008D4006 /* PostsViewModel.swift */; };
 		B9815F9127C00831008D4006 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9815F8F27C00831008D4006 /* PostsTableViewCell.swift */; };
 		B9815F9227C00831008D4006 /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9815F9027C00831008D4006 /* PostsTableViewCell.xib */; };
 		B9815F9427C00AB0008D4006 /* PostCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9815F9327C00AB0008D4006 /* PostCommentModel.swift */; };
+		B99315EC27C426EC00EF2EE1 /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99315EB27C426EC00EF2EE1 /* PostDetailVC.swift */; };
+		B99315EF27C42E0400EF2EE1 /* PostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99315ED27C42E0400EF2EE1 /* PostDetailTableViewCell.swift */; };
+		B99315F027C42E0400EF2EE1 /* PostDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99315EE27C42E0400EF2EE1 /* PostDetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,7 @@
 		B902704327C001BE0015EC75 /* Netlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B902704627C001BE0015EC75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B902704827C001BE0015EC75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B902704A27C001BE0015EC75 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		B902704A27C001BE0015EC75 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		B902704D27C001BE0015EC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B902704F27C001BF0015EC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B902705227C001BF0015EC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,10 +38,12 @@
 		B902705A27C001CC0015EC75 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B902705C27C001E20015EC75 /* CustomSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSession.swift; sourceTree = "<group>"; };
 		B902705E27C002240015EC75 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
-		B9815F8927C00494008D4006 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		B9815F8F27C00831008D4006 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		B9815F9027C00831008D4006 /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
 		B9815F9327C00AB0008D4006 /* PostCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentModel.swift; sourceTree = "<group>"; };
+		B99315EB27C426EC00EF2EE1 /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
+		B99315ED27C42E0400EF2EE1 /* PostDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewCell.swift; sourceTree = "<group>"; };
+		B99315EE27C42E0400EF2EE1 /* PostDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailTableViewCell.xib; sourceTree = "<group>"; };
 		C612668AF2587470A35BF640 /* Pods-Netlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netlog.debug.xcconfig"; path = "Target Support Files/Pods-Netlog/Pods-Netlog.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFCF5F9BBF7E14DE0E26DA8 /* Pods-Netlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netlog.release.xcconfig"; path = "Target Support Files/Pods-Netlog/Pods-Netlog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +107,8 @@
 		B9815F8C27C004FC008D4006 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B902704A27C001BE0015EC75 /* PostsViewController.swift */,
+				B902704A27C001BE0015EC75 /* PostsVC.swift */,
+				B99315EB27C426EC00EF2EE1 /* PostDetailVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,9 +116,10 @@
 		B9815F8D27C00505008D4006 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B9815F8927C00494008D4006 /* PostsViewModel.swift */,
 				B9815F8F27C00831008D4006 /* PostsTableViewCell.swift */,
 				B9815F9027C00831008D4006 /* PostsTableViewCell.xib */,
+				B99315ED27C42E0400EF2EE1 /* PostDetailTableViewCell.swift */,
+				B99315EE27C42E0400EF2EE1 /* PostDetailTableViewCell.xib */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B902705327C001BF0015EC75 /* LaunchScreen.storyboard in Resources */,
+				B99315F027C42E0400EF2EE1 /* PostDetailTableViewCell.xib in Resources */,
 				B902705027C001BF0015EC75 /* Assets.xcassets in Resources */,
 				B902704E27C001BE0015EC75 /* Main.storyboard in Resources */,
 				B9815F9227C00831008D4006 /* PostsTableViewCell.xib in Resources */,
@@ -242,14 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B902704B27C001BE0015EC75 /* PostsViewController.swift in Sources */,
+				B902704B27C001BE0015EC75 /* PostsVC.swift in Sources */,
+				B99315EF27C42E0400EF2EE1 /* PostDetailTableViewCell.swift in Sources */,
 				B902705B27C001CC0015EC75 /* Service.swift in Sources */,
 				B902704727C001BE0015EC75 /* AppDelegate.swift in Sources */,
 				B902704927C001BE0015EC75 /* SceneDelegate.swift in Sources */,
 				B9815F9427C00AB0008D4006 /* PostCommentModel.swift in Sources */,
 				B902705D27C001E20015EC75 /* CustomSession.swift in Sources */,
 				B902705F27C002240015EC75 /* PostsModel.swift in Sources */,
-				B9815F8A27C00494008D4006 /* PostsViewModel.swift in Sources */,
+				B99315EC27C426EC00EF2EE1 /* PostDetailVC.swift in Sources */,
 				B9815F9127C00831008D4006 /* PostsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

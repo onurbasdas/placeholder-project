@@ -7,9 +7,8 @@
 
 import UIKit
 
-class PostsViewController: UIViewController {
+class PostsVC: UIViewController {
     
-    var postsView = PostsViewModel()
     var service = Service()
     var postsArray = [PostsModel]()
     var postsCommentArray = [PostCommentModel]()
@@ -37,23 +36,23 @@ class PostsViewController: UIViewController {
                 postsArray.append(contentsOf: response)
                 postsTableView.reloadData()
             }
-            
-            self.service.getPostCommentData(id: 1) { response, error in
-                if let error = error {
-                    print(error)
-                    return
-                }
-                guard let response = response else {
-                    return
-                }
-                self.postsCommentArray.append(contentsOf: response)
-                
+        }
+        
+        service.getPostCommentData(id: 1) { response, error in
+            if let error = error {
+                print(error)
+                return
             }
+            guard let response = response else {
+                return
+            }
+            self.postsCommentArray.append(contentsOf: response)
+            
         }
     }
 }
 
-extension PostsViewController: UITableViewDelegate, UITableViewDataSource {
+extension PostsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postsArray.count
@@ -62,13 +61,24 @@ extension PostsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postsTableView.dequeueReusableCell(withIdentifier: PostsTableViewCell.identifier, for: indexPath) as! PostsTableViewCell
         let postIndex = postsArray[indexPath.row]
-//        let commentIndex = postsCommentArray[indexPath.row]
+        //        let commentIndex = postsCommentArray[indexPath.row]
         cell.loadData(data: postIndex)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "postsDetailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "postsDetailSegue" {
+            if let postDetailVC = segue.destination as? PostDetailVC {
+                if let indexPath = postsTableView.indexPathForSelectedRow {
+                    postDetailVC.postDetail = postsArray[indexPath.row]
+                }
+            }
+        }
     }
     
     
