@@ -26,13 +26,12 @@ class PostDetailVC: UIViewController {
     
     func configureUI() {
         detailTableView.register(PostDetailTableViewCell.nib(), forCellReuseIdentifier: PostDetailTableViewCell.identifier)
-        backView.layer.cornerRadius = 8
         lblDetailTitle.text = postDetail?.title
         lblDetailDesc.text = postDetail?.body
     }
     
     func getData() {
-        service.getPostCommentData(id: postDetail?.userId ?? 1) { response, message in
+        service.getPostCommentIdData(id: postDetail?.userId ?? 1) { response, message in
             if let message = message {
                 print(message)
             }
@@ -56,6 +55,7 @@ extension PostDetailVC: UITableViewDelegate, UITableViewDataSource {
         let cell = detailTableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as! PostDetailTableViewCell
         let indexDetail = postDetailArray[indexPath.row]
         cell.loadData(data: indexDetail)
+        cell.selectionStyle = .none
         return cell
     }
     

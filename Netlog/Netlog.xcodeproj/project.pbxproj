@@ -23,6 +23,11 @@
 		B99315EC27C426EC00EF2EE1 /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99315EB27C426EC00EF2EE1 /* PostDetailVC.swift */; };
 		B99315EF27C42E0400EF2EE1 /* PostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99315ED27C42E0400EF2EE1 /* PostDetailTableViewCell.swift */; };
 		B99315F027C42E0400EF2EE1 /* PostDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99315EE27C42E0400EF2EE1 /* PostDetailTableViewCell.xib */; };
+		B99315F227C4342A00EF2EE1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99315F127C4342A00EF2EE1 /* CardView.swift */; };
+		B997E8BD27C6384E0053F6F2 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B997E8BB27C6384E0053F6F2 /* UsersTableViewCell.swift */; };
+		B997E8BE27C6384E0053F6F2 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B997E8BC27C6384E0053F6F2 /* UsersTableViewCell.xib */; };
+		B9D7C20F27C4D29F00689465 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7C20E27C4D29F00689465 /* UsersModel.swift */; };
+		B9D7C21127C4D3A800689465 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D7C21027C4D3A800689465 /* UsersVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		B99315EB27C426EC00EF2EE1 /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
 		B99315ED27C42E0400EF2EE1 /* PostDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewCell.swift; sourceTree = "<group>"; };
 		B99315EE27C42E0400EF2EE1 /* PostDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailTableViewCell.xib; sourceTree = "<group>"; };
+		B99315F127C4342A00EF2EE1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B997E8BB27C6384E0053F6F2 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		B997E8BC27C6384E0053F6F2 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
+		B9D7C20E27C4D29F00689465 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		B9D7C21027C4D3A800689465 /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		C612668AF2587470A35BF640 /* Pods-Netlog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netlog.debug.xcconfig"; path = "Target Support Files/Pods-Netlog/Pods-Netlog.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFCF5F9BBF7E14DE0E26DA8 /* Pods-Netlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netlog.release.xcconfig"; path = "Target Support Files/Pods-Netlog/Pods-Netlog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,10 +91,10 @@
 		B902704527C001BE0015EC75 /* Netlog */ = {
 			isa = PBXGroup;
 			children = (
-				B9815F8E27C00516008D4006 /* Utils */,
-				B9815F8D27C00505008D4006 /* ViewModel */,
-				B9815F8C27C004FC008D4006 /* View */,
 				B9815F8B27C004F7008D4006 /* Model */,
+				B9815F8C27C004FC008D4006 /* View */,
+				B9815F8D27C00505008D4006 /* ViewModel */,
+				B9815F8E27C00516008D4006 /* Utils */,
 				B902704627C001BE0015EC75 /* AppDelegate.swift */,
 				B902704827C001BE0015EC75 /* SceneDelegate.swift */,
 				B902704C27C001BE0015EC75 /* Main.storyboard */,
@@ -100,6 +110,7 @@
 			children = (
 				B902705E27C002240015EC75 /* PostsModel.swift */,
 				B9815F9327C00AB0008D4006 /* PostCommentModel.swift */,
+				B9D7C20E27C4D29F00689465 /* UsersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +120,7 @@
 			children = (
 				B902704A27C001BE0015EC75 /* PostsVC.swift */,
 				B99315EB27C426EC00EF2EE1 /* PostDetailVC.swift */,
+				B9D7C21027C4D3A800689465 /* UsersVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +132,8 @@
 				B9815F9027C00831008D4006 /* PostsTableViewCell.xib */,
 				B99315ED27C42E0400EF2EE1 /* PostDetailTableViewCell.swift */,
 				B99315EE27C42E0400EF2EE1 /* PostDetailTableViewCell.xib */,
+				B997E8BB27C6384E0053F6F2 /* UsersTableViewCell.swift */,
+				B997E8BC27C6384E0053F6F2 /* UsersTableViewCell.xib */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -129,6 +143,7 @@
 			children = (
 				B902705C27C001E20015EC75 /* CustomSession.swift */,
 				B902705A27C001CC0015EC75 /* Service.swift */,
+				B99315F127C4342A00EF2EE1 /* CardView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -211,6 +226,7 @@
 			files = (
 				B902705327C001BF0015EC75 /* LaunchScreen.storyboard in Resources */,
 				B99315F027C42E0400EF2EE1 /* PostDetailTableViewCell.xib in Resources */,
+				B997E8BE27C6384E0053F6F2 /* UsersTableViewCell.xib in Resources */,
 				B902705027C001BF0015EC75 /* Assets.xcassets in Resources */,
 				B902704E27C001BE0015EC75 /* Main.storyboard in Resources */,
 				B9815F9227C00831008D4006 /* PostsTableViewCell.xib in Resources */,
@@ -251,13 +267,17 @@
 			files = (
 				B902704B27C001BE0015EC75 /* PostsVC.swift in Sources */,
 				B99315EF27C42E0400EF2EE1 /* PostDetailTableViewCell.swift in Sources */,
+				B9D7C20F27C4D29F00689465 /* UsersModel.swift in Sources */,
 				B902705B27C001CC0015EC75 /* Service.swift in Sources */,
 				B902704727C001BE0015EC75 /* AppDelegate.swift in Sources */,
 				B902704927C001BE0015EC75 /* SceneDelegate.swift in Sources */,
 				B9815F9427C00AB0008D4006 /* PostCommentModel.swift in Sources */,
 				B902705D27C001E20015EC75 /* CustomSession.swift in Sources */,
 				B902705F27C002240015EC75 /* PostsModel.swift in Sources */,
+				B9D7C21127C4D3A800689465 /* UsersVC.swift in Sources */,
+				B997E8BD27C6384E0053F6F2 /* UsersTableViewCell.swift in Sources */,
 				B99315EC27C426EC00EF2EE1 /* PostDetailVC.swift in Sources */,
+				B99315F227C4342A00EF2EE1 /* CardView.swift in Sources */,
 				B9815F9127C00831008D4006 /* PostsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

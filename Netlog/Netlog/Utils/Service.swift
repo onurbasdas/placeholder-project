@@ -15,8 +15,18 @@ class Service {
         CustomSession<[PostsModel]>().dataTask(urlRequest, completionHandler: completionHandler )
     }
     
-    func getPostCommentData(id:Int, completionHandler: @escaping ([PostCommentModel]?, String?) -> Void) {
+    func getPostCommentIdData(id:Int, completionHandler: @escaping ([PostCommentModel]?, String?) -> Void) {
         let urlRequest = ApiHelper.createURLRequest("/posts/\(id)/comments", httpMethod: .GET)
         CustomSession<[PostCommentModel]>().dataTask(urlRequest, completionHandler: completionHandler )
+    }
+    
+    func getCommentsData(completionHandler: @escaping ([PostCommentModel]?, String?) -> Void) {
+        let urlRequest = ApiHelper.createURLRequest("/comments", httpMethod: .GET)
+        CustomSession<[PostCommentModel]>().dataTask(urlRequest, completionHandler: completionHandler )
+    }
+    
+    func getUsersData(completionHandler: @escaping ([UsersModel]?, String?) -> Void) {
+        let urlRequest = ApiHelper.createURLRequest("/users", httpMethod: .GET)
+        CustomSession<[UsersModel]>().dataTask(urlRequest, completionHandler: completionHandler)
     }
 }

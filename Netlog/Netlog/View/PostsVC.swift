@@ -11,8 +11,8 @@ class PostsVC: UIViewController {
     
     var service = Service()
     var postsArray = [PostsModel]()
-    var postsCommentArray = [PostCommentModel]()
-    var idArray : [Int] = []
+    var postCommentIdArray = [PostCommentModel]()
+    var deneme : Deneme?
     
     @IBOutlet var postsTableView: UITableView!
     
@@ -37,18 +37,6 @@ class PostsVC: UIViewController {
                 postsTableView.reloadData()
             }
         }
-        
-        service.getPostCommentData(id: 1) { response, error in
-            if let error = error {
-                print(error)
-                return
-            }
-            guard let response = response else {
-                return
-            }
-            self.postsCommentArray.append(contentsOf: response)
-            
-        }
     }
 }
 
@@ -61,8 +49,10 @@ extension PostsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postsTableView.dequeueReusableCell(withIdentifier: PostsTableViewCell.identifier, for: indexPath) as! PostsTableViewCell
         let postIndex = postsArray[indexPath.row]
-        //        let commentIndex = postsCommentArray[indexPath.row]
         cell.loadData(data: postIndex)
+        cell.lblCommentCount.text = "\(postIndex.id)"
+        cell.lblCommentDesc.text = postIndex.title
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -71,7 +61,6 @@ extension PostsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "postsDetailSegue" {
             if let postDetailVC = segue.destination as? PostDetailVC {
                 if let indexPath = postsTableView.indexPathForSelectedRow {

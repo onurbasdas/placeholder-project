@@ -8,9 +8,14 @@
 import Foundation
 
 struct PostCommentModel: Codable {
-    var postId : Int
-    var id : Int
-    var name : String
-    var email : String
-    var body : String
+    var postId : Int?
+    var id : Int?
+    var name : String?
+    var email : String?
+    var body : String?
+}
+
+struct Deneme {
+    var postCom : PostCommentModel?
+    var comCount : Int?
 }
